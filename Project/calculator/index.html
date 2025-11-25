@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <scrip>
+         
+     function calif(){
+        let output=document.getElementById("result").value;
+        // let DATA=eval(output);
+        //document.getElementById("result").value=DATA;
+        document.getElementById("result").value=eval(output);
+    } 
+
+        
+    </script> -->
+    <!-- <script>
+        function clearResult(){
+            let output=document.getElementById("result").value="";
+        }
+
+    </script> -->
+
+    
+
+</head>
+<body>
+<div class="main_body">
+    
+    <input type="text" id="result"><br><br>
+
+<input type="button" value="7" onclick="document.getElementById('result').value += '7'">
+<input type="button" value="8" onclick="document.getElementById('result').value += '8'">
+<input type="button" value="9" onclick="document.getElementById('result').value += '9'">
+<input type="button" value="+" onclick="document.getElementById('result').value += '+'">
+<br><br>
+
+<input type="button" value="6" onclick="document.getElementById('result').value += '6'">
+<input type="button" value="5" onclick="document.getElementById('result').value += '5'">
+<input type="button" value="4" onclick="document.getElementById('result').value += '4'">
+<input type="button" value="-" onclick="document.getElementById('result').value += '-'">
+<br><br>
+
+<input type="button" value="3" onclick="document.getElementById('result').value += '3'">
+<input type="button" value="2" onclick="document.getElementById('result').value += '2'">
+<input type="button" value="1" onclick="document.getElementById('result').value += '1'">
+<input type="button" value="*" onclick="document.getElementById('result').value += '*'">
+<br><br>
+
+<input type="button" value="0" onclick="document.getElementById('result').value += '0'">
+<input type="button" value="." onclick="document.getElementById('result').value += '.'">
+<input type="button" value="/" onclick="document.getElementById('result').value += '/'">
+<!-- <input type="button" value="=" onclick="calif()"> -->
+<input type="button" value="=" onclick="document.getElementById('result').value=eval(document.getElementById('result').value)">
+<br><br>
+<input type="button" value="Clear" onclick="document.getElementById('result').value=''">
+ <br><br>
+<input type="button" value="ON" onclick="document.getElementById('result').disabled = false">
+<input type="button" value="OFF" onclick="document.getElementById('result').disabled = true">
+
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let arr = [11, 33, 74, 89, 21, 3];
+let first = 0;
+let second = 0;
+
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > first) {
+        second = first;
+        first = arr[i];
+    } else if (arr[i] > second && arr[i] < first) {
+        second = arr[i];
+    }
+}
+
+document.write("Second highest number: " + second);
+</script>
+
+</body>
+</html>

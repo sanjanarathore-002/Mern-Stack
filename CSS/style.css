@@ -1,0 +1,64 @@
+/* Center everything on the page */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #000010, #000);
+  overflow: hidden;
+}
+
+/* Space container */
+.space {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+/* Earth setup */
+.earth {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #0077ff, #00cc88);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 30px #00ccff, inset -10px -10px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Orbit container */
+.orbit {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: orbit 5s linear infinite;
+}
+
+/* Moon setup */
+.moon {
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle at 25% 25%, #ddd, #999);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px #fff;
+  
+}
+
+/* Orbit animation */
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  100% {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}

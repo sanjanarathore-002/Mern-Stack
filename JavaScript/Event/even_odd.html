@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print the number is even or odd</title>
+
+    <script>
+        function Even_Odd()
+        {
+            let num=parseInt(document.getElementById("number").value);
+            let result=document.getElementById("result").value;
+
+            if(num%2==0){
+                document.getElementById("result").value="Even number";
+            }
+            else{
+                document.getElementById("result").value="Odd number";
+            }
+        }
+       
+    </script>
+</head>
+<body>
+ Enter the Number : <input type="text" name="text" id="Number"> <br><br>
+ <button onclick="Even_Odd">Even or odd</button>  <br><br>
+ result : <input type="text" name="result" id="result" readonly>
+</body>
+</html>

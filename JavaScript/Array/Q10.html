@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11];
+let size = arr.length;
+let c = 0;
+
+for (let i = 0; i < size; i++) {
+    let num = arr[i];
+    if (num <= 1) continue; // 0 and 1 are not prime
+
+    let isPrime = true;
+    for (let j = 2; j <= num / 2; j++) {
+        if (num % j == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+
+    if (isPrime) {
+        document.write("Prime number: " + num + "<br>");
+        c++;
+    }
+}
+
+document.write("<br>Total prime numbers: " + c);
+</script>
+
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let value=[10,20,30,40,50];
+        let size=value.length;
+        let mul=1;
+        for(let i=0; i<size; i++){
+            if(i!=0){
+                document.write(" * ");
+            }
+            document.write(value[i]);
+            mul=mul*value[i];
+        }
+        document.write(" = "+mul)
+    </script>
+</body>
+</html>

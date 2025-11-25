@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function color(){
+            let ope = document.getElementById("color").value;
+
+            if(ope == ""){
+                alert("Nothing change background color");
+            } 
+
+            else if(ope == "blue"){
+                document.body.style.backgroundColor = "blue";
+            }
+            else if(ope=="red"){
+                document.body.style.backgroundColor = "red";
+            }
+            else if(ope=="green"){
+                document.body.style.backgroundColor = "green";
+            }
+            else if(ope =="yellow"){
+                
+             document.body.style.backgroundColor="yellow";
+            }
+
+            else if(ope=="turquoise"){
+                document.body.style.backgroundColor="turquoise";
+            }
+            else {
+                document.body.style.backgroundColor = ope;
+            }
+        }
+    </script>
+</head>
+<body>
+   Select background color: 
+   <select onchange="color()" id="color">
+        <option value="">select color</option>
+        <option value="blue">blue</option>
+        <option value="red">red</option>
+        <option value="green">green</option>
+        <option value="black">black</option>
+        <option value="yellow">yellow</option>
+        <option value="turquoise">turquoise</option>
+        <option value="violet">violet</option>
+        <option value="pink">pink</option>
+        
+    
+    </select>
+</body>
+</html>
+
+</body>
+</html>

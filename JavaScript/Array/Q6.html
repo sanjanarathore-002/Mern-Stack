@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+// let arr = [11, 33, 74, 89, 21, 3];
+// let lowest = arr[0];
+
+// for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] < lowest) {
+//         lowest = arr[i];
+//     }
+// }
+
+// document.write("First lowest number: " + lowest);
+let arr = [11, 33, 74, 89, 21, 3];
+let first = arr[0];
+let second = arr[0];
+
+for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < first) {
+        second = first;
+        first = arr[i];
+    } else if (arr[i] < second && arr[i] > first) {
+        second = arr[i];
+    }
+}
+
+document.write("First lowest: " + first + "<br>");
+document.write("Second lowest: " + second);
+
+</script>
+
+</body>
+</html>

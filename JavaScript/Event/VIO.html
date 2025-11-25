@@ -1,0 +1,97 @@
+<!--  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Play_vid(){
+            var VIO=document.getElementById("video");
+            VIO.src="https://www.youtube.com/embed/mDbWx23IuBg?si=ghgxEpvYwktxFRQp";
+            var Video=document.getElementById()
+            video.Play_vid();
+        }
+        function Pause_vid(){
+            var VIO=document.getElementById("video")
+           VIO.src="https://www.youtube.com/embed/mDbWx23IuBg?si=ghgxEpvYwktxFRQp";
+            var Video=document.getElementById()
+            video.Pause_vid();
+        }
+
+    </script>
+     <style>
+        button{
+          align-content: center;
+            
+        }
+     </style>
+</head>
+<body>
+    <video width="250">
+        <source src="https://www.youtube.com/watch?v=CGjHpnm8TeE">
+    </video>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/mDbWx23IuBg?si=ghgxEpvYwktxFRQp" title="YouTube video player" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+    web-share" referrerpolicy="strict-origin-when-cross-origin" id="video" allowfullscreen></iframe>
+    <br>
+    <button onclick="Play_vid()">Play</button>
+    <button onclick="Pause_vid()">Pause</button>
+    
+</body>
+</html> -->
+
+
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Control</title>
+    <script>
+        var player;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('video', {
+                events: {
+                    'onReady': onPlayerReady
+                }
+            });
+        }
+
+        function onPlayerReady() {
+            document.getElementById("play_btn").onclick = function () {
+                player.playVideo();
+            };
+            document.getElementById("pause_btn").onclick = function () {
+                player.pauseVideo();
+            };
+        }
+    </script>
+    <style>
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+     YouTube API Script 
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <iframe id="video" width="560" height="315"
+        src="https://www.youtube.com/embed/mDbWx23IuBg?enablejsapi=1"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+
+    <br>
+    <button id="play_btn">Play</button>
+    <button id="pause_btn">Pause</button>
+
+</body>
+</html>  -->
+

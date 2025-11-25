@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script>
+
+	document.write("Pattern 6 ");
+	document.write("<br><br>");
+	var n = 5; // total rows
+    for (var i = 1; i <= n; i++) {
+      // print spaces
+      for (var j = i; j < n; j++) {
+        document.write("&nbsp;");
+      }
+      // print stars
+      for (var k = 1; k <= i; k++) {
+        document.write("*" +" ");
+      }
+      document.write("<br>");
+    }
+
+	
+    document.write("<br><br>")
+    document.write("Pattern 7 ");
+	document.write("<br><br>");
+
+	for(var i=1; i<=5; i++)
+	{
+		for(var j=1; j<=5-i; j++)
+		{
+			document.write(" &nbsp;")
+		}
+		for(var k=1; k<=i; k++){
+			document.write(k+"&nbsp;");
+		}
+		document.write("<br>")
+	}
+  
+
+    document.write("<br>");
+
+    document.write("<br><br>")
+    document.write("Pattern 8 ");
+	document.write("<br><br>");
+
+	for(var i=5; i>=1; i--){
+		for(var j=1; j<=5-i; j++){
+			document.write("&nbsp; ");
+		}
+		for(var k=1; k<=i; k++){
+			document.write(k+"&nbsp;")
+		}
+		document.write("<br>")
+		
+	}
+
+	document.write("<br><br>");
+	document.write("patter 9");
+	 document.write("<br><br>")
+  for(var i = 1; i <= 5; i++) {
+  	for(var k=1; k<=5-i; k++){
+			document.write("&nbsp; ");
+		}
+    for (var j = 1; j <= i; j++) {
+      document.write(String.fromCharCode(64 + j) +"&nbsp;");
+    }
+    document.write("<br>");
+  }
+
+  document.write("<br><br>");
+  document.write("Full Pyramid Pattern ")
+  document.write("<br>");
+  var row=5;
+  for(var i=0; i<row; i++){
+  	for(var j=0; j<2*(row-i)-1; j++){
+  		document.write(" &nbsp");
+  	}
+  	for(var k=0; k<2*i+1; k++){
+  		document.write(k+"&nbsp");
+  	}
+  	document.write("<br>")
+  }
+document.write("<br><br>")
+    document.write("Pattern 16 ");
+	document.write("<br><br>");
+
+	for(var i=1; i<=5; i++)
+	{
+		
+		for(var k=1; k<=i; k++){
+			document.write(k+"&nbsp;");
+		}
+		document.write("<br>")
+	}
+  
+ 
+  document.write("<br><br>")
+  document.write("Pattern 21")
+  document.write("<br>")
+  var char =1;
+  for(var i = 1; i <= 5; i++) {
+    for (var j = 1; j <= i; j++) {
+      document.write(String.fromCharCode(64 + char) + " ");
+      char++;
+    }
+    document.write("<br>");
+  }
+
+  document.write("<br><br>")
+    document.write("Pattern 22 ");
+	document.write("<br><br>");
+	for(var i=1; i<=5; i++){
+		for(var j=0; j<5-i; j++){
+			document.write("&nbsp;");
+		}
+		var c=1;
+		for(var k=1; k<=i; k++){
+			document.write(c+"&nbsp;")
+			c=c*(i-k)/k;
+		}
+		document.write("<br>")
+	}
+
+
+document.write("<br><br>")
+    document.write("Pattern 10 ");
+	document.write("<br><br>");
+    var alp = 65;
+    var r = 5;
+
+    for (var i = r; i >= 1; i--) {
+      // print spaces
+      for (var j = 1; j < i; j++) {
+        document.write("&nbsp;&nbsp;");
+      }
+
+      // print alphabets
+      for (var k = i; k <= 5; k++) {
+        document.write(String.fromCharCode(alp + k - 1) + " ");
+      }
+
+      document.write("<br>");
+    }
+
+
+document.write("<br><br>")
+    document.write("Pattern 19");
+	document.write("<br><br>");
+	
+    var rows = 70;
+
+    for (var i = 64; i < rows; i++) {
+      for (var j = rows - 1; j > i; j--) {
+        document.write(String.fromCharCode(j) + " ");
+      }
+      document.write("<br>");
+    }
+  </script>
+</body>
+</html>
+
+</script>
+</body>
+</html>
