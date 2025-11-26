@@ -5,6 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Program</title>
     <link rel="stylesheet" href="All_program.css">
+<script>
+function calculate() {
+    let question = document.getElementById("select_question").value;
+    let num = parseInt(document.getElementById("Number_out").value);
+    let result = "";
+
+    // 1. Sum of Digits
+    if (question === "Sum_of_Number") {
+        let sum = 0, temp = num;
+        while(temp > 0){
+            sum += temp % 10;
+            temp = Math.floor(temp / 10);
+        }
+        result = "Sum of digits: " + sum;
+    }
+
+    // 2. Even or Odd
+    else if (question === "Even_Odd") {
+        result = (num % 2 === 0) ? "Even number" : "Odd number";
+    }
+
+    // 3. Palindrome
+    else if (question === "Palindrom") {
+        let temp = num, rev = 0;
+        while(temp > 0){
+            rev = rev * 10 + (temp % 10);
+            temp = Math.floor(temp / 10);
+        }
+        result = (rev === num) ? "It is Palindrome" : "Not Palindrome";
+    }
+
+    // 4. Reverse Number
+    else if (question === "Reverse_Number") {
+        let temp = num, rev = 0;
+        while(temp > 0){
+            rev = rev * 10 + (temp % 10);
+            temp = Math.floor(temp / 10);
+        }
+        result = "Reverse: " + rev;
+    }
+
+    // 5. Factorial
+    else if (question === "Factorial") {
+        let fact = 1;
+        for (let i = 1; i <= num; i++) {
+            fact *= i;
+        }
+        result = "Factorial: " + fact;
+    }
+
+    // 6. Prime Number Check
+    else if (question === "Prime_check") {
+        let isPrime = true;
+        if (num < 2) isPrime = false;
+        else {
+            for(let i = 2; i <= Math.sqrt(num); i++){
+                if(num % i === 0){
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+        result = isPrime ? "Prime number" : "Not a prime number";
+    }
+
+    // 7. Armstrong Number
+    else if (question === "Armstorng") {
+        let temp = num, sum = 0;
+        let digits = num.toString().length;
+
+        while(temp > 0){
+            let digit = temp % 10;
+            sum += Math.pow(digit, digits);
+            temp = Math.floor(temp / 10);
+        }
+
+        result = (sum === num) ? "Armstrong number" : "Not Armstrong";
+    }
+
+    // 8. Length of Number
+    else if (question === "Length_of_the_number") {
+        result = "Length: " + num.toString().length;
+    }
+
+    // 9. Leap Year
+    else if (question === "LeapYear") {
+        if ((num % 4 === 0 && num % 100 !== 0) || num % 400 === 0) {
+            result = "Leap Year";
+        } else {
+            result = "Not a Leap Year";
+        }
+    }
+
+    // 10. Largest Digit in the Number
+    else if (question === "LargestValue_inTheNumber") {
+        let temp = num, largest = 0;
+        while(temp > 0){
+            let digit = temp % 10;
+            if (digit > largest) largest = digit;
+            temp = Math.floor(temp / 10);
+        }
+        result = "Largest digit: " + largest;
+    }
+
+    // If no question selected
+    else {
+        result = "Please select a question first.";
+    }
+
+    document.getElementById("result").value = result;
+}
+</script>
+
 </head>
 <body>
     <div class="main">
@@ -24,7 +137,7 @@
         </select><br><br>
         <label for="text" class="label_1">Enter The Number :</label><br>
         <input type="text" name="number" id="Number_out" class="input"><br><br>
-       <input type="button" value="Calculation"  class="input"><br><br>
+       <input type="button" value="Calculation"  class="input" onclick="calculate()"><br><br>
         <input type="text" id="result" class="input">
     </div>
 </body>

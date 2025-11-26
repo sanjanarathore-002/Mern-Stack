@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+
+    <script>
+        function calcaulator()
+        {
+            let FN=parseInt(document.getElementById("fn").value);
+            let SN=parseInt(document.getElementById("sn").value);
+            let result=parseInt(document.getElementById("result").innerText);
+            let ope = document.getElementById("opt").value;
+            if(ope =='')
+            {
+                document.getElementById("result").innerText=" ";
+                alert("enter any number ")
+            }
+            else if(ope == "+")
+            {
+                result=FN+SN;
+                document.getElementById("result").innerText=result;
+            }
+            else if(ope=="-")
+            {
+                result=FN-SN;
+                document.getElementById("result").innerText=result;
+            }
+            else if(ope=="*")
+            {
+                result=FN*SN;
+                document.getElementById("result").innerText=result;
+
+            }
+            else if(ope=="/")
+            {
+                result=FN/SN;
+                document.getElementById("result").innerText=result;
+            }
+            else if(ope=="%")
+            {
+                result=FN%SN;
+                document.getElementById("result").innerText=result;
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="main">
+ First Number : <input type="text" name="first number" id="fn"><br><br>
+ Second Number : <input type="text" name="second number" id="sn"><br><br>
+ Select Operator : <select id ="opt" onchange="calcaulator()">
+    <option value="">Select Operator</option>
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">x</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+ </select> 
+ <br><br>
+ result : <span id="result"></span>  
+
+ </div>
+</body>
+</html>
